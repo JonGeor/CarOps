@@ -42,4 +42,18 @@ public class Mechanic {
 		return name;
 	}
 
+	//GUI
+	public void addPart(Part p, Repair r) {
+		r.addPart(p);
+	}
+	
+	public void addParts(Part p, int ammount, Repair r) {
+		r.addParts(p,ammount);
+	}
+	
+	public void completedTask(TaskForRepair t) {
+		t.setCompleted(true);
+		t.getRepair().addTask(t.getTask());
+	}
+
 }
