@@ -31,5 +31,13 @@ public class SupervisorMech extends Mechanic {
 	public ArrayList<Repair> getRepairs() {
 		return repairs;
 	}
+
+	//GUI
+	public void assignTask(TaskForRepair t, Mechanic m) {
+		m.addTask(t);
+	}
 	
+	public void finishedRepair(Repair r) {
+		r.setCompleted(true);
+	}
 }
